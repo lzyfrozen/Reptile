@@ -1,0 +1,192 @@
+{
+  "siteUrl": "https://pifa.pinduoduo.com/",
+  "detailUrl": "https://pifa.pinduoduo.com/goods/detail/?gid=",
+  "categoryList": [
+    {
+      "level": 1,
+      "optId": 9975,
+      "name": "食品",
+      "goodsCategory": [
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "方便速食",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "肉干/海味",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "饼干膨化",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "牛奶饮料",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "坚果蜜饯",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "糕点点心",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "传统滋补",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "中外名酒",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "粮油/调料",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "营养成分",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "营养保健",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "茶",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "optId": 9419,
+      "name": "生鲜",
+      "goodsCategory": [
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "海鲜水产",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "新鲜蔬菜",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "新鲜水果",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "熟食酱菜",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        },
+        {
+          "level": 2,
+          "optId": 0,
+          "name": "肉禽蛋类",
+          "goodsCategory": {
+            "level": 3,
+            "optId": 0,
+            "name": ""
+          }
+        }
+      ]
+    }
+  ]
+}
