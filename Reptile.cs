@@ -45,12 +45,25 @@ namespace Reptile
             page = int.Parse(cmbPage.Text);
 
             string url = AppDomain.CurrentDomain.BaseDirectory;
-            LoadJson(Path.Combine(url, "setting.json"));
+
+            //load setting
+            pddSettingEntity entity;
+            try
+            {
+                entity = LoadJson(Path.Combine(url, "setting.json"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Json文件配置错误！请联系管理员！");
+                return;
+            }
+
+
 
         }
 
         //load json
-        private JObject LoadJson(string url)
+        private pddSettingEntity LoadJson(string url)
         {
             using (StreamReader file = new StreamReader(url, Encoding.Default))
             {
@@ -61,23 +74,45 @@ namespace Reptile
                     pddSetting.siteUrl = obj["siteUrl"].ToSafeString();
                     pddSetting.detailUrl = obj["detailUrl"].ToSafeString();
 
-
-                    pddSetting.categoryList = new List<CategoryOne>();
-                    int tryInt = 0;
-                    JArray jarray = (JArray)obj["categoryList"];
-                    for (int i = 0; i < jarray.Count; i++)
+                    int out_level = 0, out_optId = 0;
+                    JArray array_one = (JArray)obj["categoryList"];
+                    for (int i = 0; i < array_one.Count; i++)
                     {
-                        CategoryOne category = new CategoryOne();
-                        int.TryParse(jarray[i]["level"].ToSafeString(), out tryInt);
-                        category.level = tryInt;
-
+                        CategoryOne category_one = new CategoryOne();
+                        int.TryParse(array_one[i]["level"].ToSafeString(), out out_level);
+                        int.TryParse(array_one[i]["optId"].ToSafeString(), out out_optId);
+                        category_one.level = out_level;
+                        category_one.optId = out_optId;
+                        category_one.name = array_one[i]["name"].ToSafeString();
+                        JArray array_two = (JArray)array_one[i]["goodsCategory"];
+                        for (int j = 0; j < array_two.Count; j++)
+                        {
+                            CategoryTwo category_two = new CategoryTwo();
+                            int.TryParse(array_two[j]["level"].ToSafeString(), out out_level);
+                            int.TryParse(array_two[j]["optId"].ToSafeString(), out out_optId);
+                            category_two.level = out_level;
+                            category_two.optId = out_optId;
+                            category_two.name = array_two[j]["name"].ToSafeString();
+                            JArray array_category = (JArray)array_two[j]["goodsCategory"];
+                            for (int k = 0; k < array_category.Count; k++)
+                            {
+                                Category category = new Category();
+                                int.TryParse(array_category[k]["level"].ToSafeString(), out out_level);
+                                int.TryParse(array_category[k]["optId"].ToSafeString(), out out_optId);
+                                category.level = out_level;
+                                category.optId = out_optId;
+                                category.name = array_two[k]["name"].ToSafeString();
+                                category_two.goodsCategory.Add(category);
+                            }
+                            category_one.goodsCategory.Add(category_two);
+                        }
+                        pddSetting.categoryList.Add(category_one);
                     }
 
 
-                    return obj;
+                    return pddSetting;
                 }
             }
-
         }
 
         private void tbContext_KeyDown(object sender, KeyEventArgs e)

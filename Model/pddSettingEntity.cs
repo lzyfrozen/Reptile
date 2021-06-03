@@ -11,17 +11,17 @@ namespace Reptile
         public string siteUrl { set; get; }
         public string detailUrl { set; get; }
 
-        public List<CategoryOne> categoryList { get; set; }
+        public List<CategoryOne> categoryList { get; set; } = new List<CategoryOne>();
 
     }
 
     public class CategoryOne : Category
     {
-        public List<CategoryTwo> goodsCategory { get; set; }
+        public List<CategoryTwo> goodsCategory { get; set; } = new List<CategoryTwo>();
     }
 
     public class CategoryTwo : Category
     {
-        public List<Category> goodsCategory { get; set; }
+        public List<Category> goodsCategory { get; set; } = new List<Category>();
     }
 }
