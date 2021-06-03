@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Reptile
 {
-    public partial class Form1 : Form
+    public partial class Reptile : Form
     {
         private int optId;
         private int page;
         private decimal minPrice, maxPrice = 0m;
         private string url = string.Empty;
-        public Form1()
+        public Reptile()
         {
             InitializeComponent();
             this.cmbPage.SelectedIndex = 0;

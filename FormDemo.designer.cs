@@ -1,6 +1,6 @@
 ﻿namespace Reptile
 {
-    partial class Form11
+    partial class FormDemo
     {
         /// <summary>
         /// 必需的设计器变量。

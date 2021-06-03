@@ -14,11 +14,11 @@ using System.Windows.Forms;
 
 namespace Reptile
 {
-    public partial class Form11 : Form
+    public partial class FormDemo : Form
     {
         private static Dictionary<string, string> headerData = new Dictionary<string, string>();
         private static Dictionary<string, string> dic = new Dictionary<string, string>();
-        public Form11()
+        public FormDemo()
         {
             InitializeComponent();
             dic.Add("CustomUnit", "计量单位代码");
@@ -212,5 +212,7 @@ namespace Reptile
                 ((TextBox)sender).SelectAll();
             }
         }
+
+
     }
 }

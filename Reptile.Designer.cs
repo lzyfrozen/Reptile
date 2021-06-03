@@ -1,7 +1,7 @@
 ﻿
 namespace Reptile
 {
-    partial class Form1
+    partial class Reptile
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -30,6 +30,8 @@ namespace Reptile
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tbMaxPrice = new System.Windows.Forms.TextBox();
             this.tbMinPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@ namespace Reptile
             this.cmbTwo = new System.Windows.Forms.ComboBox();
             this.cmbOne = new System.Windows.Forms.ComboBox();
             this.tbContext = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,6 +83,25 @@ namespace Reptile
             this.splitContainer1.Size = new System.Drawing.Size(882, 553);
             this.splitContainer1.SplitterDistance = 100;
             this.splitContainer1.TabIndex = 13;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(766, 56);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 25);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "生成Excel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(766, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 25);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "生成文本";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // tbMaxPrice
             // 
@@ -214,32 +233,13 @@ namespace Reptile
             this.tbContext.Size = new System.Drawing.Size(882, 449);
             this.tbContext.TabIndex = 25;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(766, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 25);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "生成文本";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(766, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 25);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "生成Excel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Form1
+            // Reptile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 553);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form1";
+            this.Name = "Reptile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reptile";
             this.Load += new System.EventHandler(this.Form1_Load);

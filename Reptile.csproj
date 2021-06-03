@@ -101,16 +101,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class2.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Reptile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Reptile.Designer.cs">
+      <DependentUpon>Reptile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form11.cs">
+    <Compile Include="FormDemo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form11.designer.cs" />
+    <Compile Include="FormDemo.designer.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,10 +120,10 @@
     <Compile Include="ObjectExtend.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Reptile.resx">
+      <DependentUpon>Reptile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form11.resx" />
+    <EmbeddedResource Include="FormDemo.resx" />
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
