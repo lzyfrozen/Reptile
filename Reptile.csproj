@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class2.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\pddSettingEntity.cs" />
     <Compile Include="Reptile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,7 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="json1.json" />
+    <None Include="setting.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -36,19 +39,53 @@ namespace Reptile
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (Vaild() == true) return;
+            //if (Vaild() == true) return;
 
             //page
-            page = (int)cmbPage.SelectedValue;
+            page = int.Parse(cmbPage.Text);
 
-
+            string url = AppDomain.CurrentDomain.BaseDirectory;
+            LoadJson(Path.Combine(url, "setting.json"));
 
         }
 
         //load json
-        private void LoadJsonSetting()
+        private JObject LoadJson(string url)
         {
+            using (StreamReader file = new StreamReader(url, Encoding.Default))
+            {
+                using (JsonTextReader reader = new JsonTextReader(file))
+                {
+                    pddSettingEntity pddSetting = new pddSettingEntity();
+                    JObject obj = (JObject)JToken.ReadFrom(reader);
+                    pddSetting.siteUrl = obj["siteUrl"].ToSafeString();
+                    pddSetting.detailUrl = obj["detailUrl"].ToSafeString();
 
+
+                    pddSetting.categoryList = new List<CategoryOne>();
+                    int tryInt = 0;
+                    JArray jarray = (JArray)obj["categoryList"];
+                    for (int i = 0; i < jarray.Count; i++)
+                    {
+                        CategoryOne category = new CategoryOne();
+                        int.TryParse(jarray[i]["level"].ToSafeString(), out tryInt);
+                        category.level = tryInt;
+
+                    }
+
+
+                    return obj;
+                }
+            }
+
+        }
+
+        private void tbContext_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
+            {
+                ((TextBox)sender).SelectAll();
+            }
         }
 
         private bool Vaild()

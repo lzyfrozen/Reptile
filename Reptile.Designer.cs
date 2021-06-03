@@ -230,8 +230,10 @@ namespace Reptile
             this.tbContext.Location = new System.Drawing.Point(0, 0);
             this.tbContext.Multiline = true;
             this.tbContext.Name = "tbContext";
+            this.tbContext.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbContext.Size = new System.Drawing.Size(882, 449);
             this.tbContext.TabIndex = 25;
+            this.tbContext.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbContext_KeyDown);
             // 
             // Reptile
             // 
