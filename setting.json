@@ -9,21 +9,61 @@
       "goodsCategory": [
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9981,
           "name": "方便速食",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
-              "optId": 0,
-              "name": ""
+              "optId": 10027,
+              "name": "方便面"
+            },
+            {
+              "level": 3,
+              "optId": 10033,
+              "name": "即食火锅"
+            },
+            {
+              "level": 3,
+              "optId": 10029,
+              "name": "螺蛳粉"
+            },
+            {
+              "level": 3,
+              "optId": 10034,
+              "name": "速食粥饭菜"
+            },
+            {
+              "level": 3,
+              "optId": 10028,
+              "name": "酸辣粉"
+            },
+            {
+              "level": 3,
+              "optId": 10150,
+              "name": "烘焙"
+            },
+            {
+              "level": 3,
+              "optId": 10031,
+              "name": "肉制品"
+            },
+            {
+              "level": 3,
+              "optId": 10030,
+              "name": "米线米粉"
+            },
+            {
+              "level": 3,
+              "optId": 24100,
+              "name": "粽子"
             }
           ]
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9978,
           "name": "肉干/海味",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -33,9 +73,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9977,
           "name": "饼干膨化",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -45,9 +85,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9982,
           "name": "牛奶饮料",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -57,9 +97,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9979,
           "name": "坚果蜜饯",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -69,9 +109,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9976,
           "name": "糕点点心",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -81,9 +121,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 10155,
           "name": "传统滋补",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -93,9 +133,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9984,
           "name": "中外名酒",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -105,9 +145,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9980,
           "name": "粮油/调料",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -117,9 +157,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 10154,
           "name": "营养成分",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -129,9 +169,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 10153,
           "name": "营养保健",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -141,9 +181,9 @@
         },
         {
           "level": 2,
-          "optId": 0,
+          "optId": 9983,
           "name": "茶",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -162,7 +202,7 @@
           "level": 2,
           "optId": 0,
           "name": "海鲜水产",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -175,7 +215,7 @@
           "level": 2,
           "optId": 0,
           "name": "新鲜蔬菜",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -188,7 +228,7 @@
           "level": 2,
           "optId": 0,
           "name": "新鲜水果",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -200,7 +240,7 @@
           "level": 2,
           "optId": 0,
           "name": "熟食酱菜",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,
@@ -212,7 +252,7 @@
           "level": 2,
           "optId": 0,
           "name": "肉禽蛋类",
-          "goodsCategory": [
+          "category": [
             {
               "level": 3,
               "optId": 0,

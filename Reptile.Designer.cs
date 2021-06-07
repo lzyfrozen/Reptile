@@ -215,6 +215,7 @@ namespace Reptile
             this.cmbTwo.Name = "cmbTwo";
             this.cmbTwo.Size = new System.Drawing.Size(121, 23);
             this.cmbTwo.TabIndex = 14;
+            this.cmbTwo.SelectedIndexChanged += new System.EventHandler(this.cmbTwo_SelectedIndexChanged);
             // 
             // cmbOne
             // 
@@ -223,6 +224,7 @@ namespace Reptile
             this.cmbOne.Name = "cmbOne";
             this.cmbOne.Size = new System.Drawing.Size(121, 23);
             this.cmbOne.TabIndex = 13;
+            this.cmbOne.SelectedIndexChanged += new System.EventHandler(this.cmbOne_SelectedIndexChanged);
             // 
             // tbContext
             // 

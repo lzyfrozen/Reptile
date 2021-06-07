@@ -101,8 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class2.cs" />
+    <Compile Include="Common\XClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Model\Category.cs" />
-    <Compile Include="Model\pddSettingEntity.cs" />
+    <Compile Include="Model\ComboBoxItem.cs" />
+    <Compile Include="Model\PddSettingEntity.cs" />
     <Compile Include="Reptile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +142,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="setting2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="setting.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
