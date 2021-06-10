@@ -64,6 +64,7 @@ namespace Reptile
             //page
             page = int.Parse(cmbPage.Text);
 
+            int i_optId = 9981;
             string siteUrl = data.siteUrl;
             string detailUrl = data.detailUrl;
             string requestUrl = @"https://pifa.pinduoduo.com/pifa/search/searchOptGoods";
@@ -72,33 +73,76 @@ namespace Reptile
             {
                 var client = new RestClient(requestUrl ?? "");
                 var request = new RestRequest(methodName) { RequestFormat = DataFormat.Json, Method = Method.POST };
+                request.AddHeader("accept", "*/*");
+                request.AddHeader("accept-encoding", "gzip, deflate, br");
+                request.AddHeader("accept-language", "zh-CN,zh;q=0.9");
+                request.AddHeader("content-type", "application/json");
+                request.AddHeader("origin", "https://pifa.pinduoduo.com");
+                request.AddHeader("referer", "https://pifa.pinduoduo.com/search");
+                request.AddHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36");
+                request.AddHeader("cookie", "_nano_fp=XpExX5EbnpEYXqdxlT_0mkHtWLNvFnhqbw6dw61m; webp=true; api_uid=rBUUqmC4XtxjgWo+VhQ9Ag==; VISITOR_PASS_ID=RhhxhWnIhaI1kG4ZUhEgd0fByCgfYMZqTt8fG893H6ZCuO6hZFD3NMzj7xrk5yLzT_grlBCBallKNp7rzv416usUqJqahj8SKGBKjffRjwQ_f43bfafa89");
 
-                using (XWebClient webClient = new XWebClient()) {
-                    webClient.Headers.Add("accept", "*/*");
-                    webClient.Headers.Add("accept-Encoding", "gzip, deflate, br");
-                    webClient.Headers.Add("accept-Language", "zh-CN,zh;q=0.9");
-                    webClient.Headers.Add("content-type", "application/json");
-                    webClient.Headers.Add("origin", "https://pifa.pinduoduo.com");
-                    webClient.Headers.Add("referer", "https://pifa.pinduoduo.com/search");
-                    webClient.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36");
+                var body = new
+                {
+                    level = 2,
+                    optId = i_optId,
+                    page = 1,
+                    size = 20,
+                    sort = 0,
+                    propertyItems = new string[] { },
+                    url = string.Empty
+                };
 
+                request.AddParameter("application/json; charset=utf-8", JsonConvert.SerializeObject(body), ParameterType.RequestBody);
 
-                    headerData.Add("level", "2");
-                    AddHeader(webClient, headerData);
-                    webClient.
+                //object obj = new object();
+                //request.AddJsonBody(obj);
+
+                var response = client.Execute(request);
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+
                 }
 
 
-                    //            : 2
-                    //optId: 9494
-                    //page: 2
-                    //propertyItems:[]
-                    //            rn: "02e7f62b-7bbf-4321-a055-9d8a6d932805"
-                    //size: 20
-                    //sort: 0
-                    //url: ""
 
-                    page--;
+                //using (XWebClient webClient = new XWebClient())
+                //{
+                //    webClient.Headers.Add("accept", "*/*");
+                //    webClient.Headers.Add("accept-encoding", "gzip, deflate, br");
+                //    webClient.Headers.Add("accept-language", "zh-CN,zh;q=0.9");
+                //    webClient.Headers.Add("content-type", "application/json");
+                //    webClient.Headers.Add("origin", "https://pifa.pinduoduo.com");
+                //    webClient.Headers.Add("referer", "https://pifa.pinduoduo.com/search");
+                //    webClient.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36");
+
+
+                //    headerData.Add("level", "2");
+                //    headerData.Add("optId", str_optId);
+                //    headerData.Add("page", "1");
+                //    headerData.Add("size", "20");
+                //    headerData.Add("sort", "0");
+
+                //    AddHeader(webClient, headerData);
+
+                //    //byte[] post = Encoding.UTF8.GetBytes(postData);
+                //    byte[] post = Encoding.UTF8.GetBytes(string.Empty);
+                //    byte[] responseData = webClient.UploadData(requestUrl, "POST", post);//得到返回字符流  
+                //    string responseHtml = Encoding.GetEncoding("UTF-8").GetString(responseData);//解码
+                //}
+
+
+
+                //            : 2
+                //optId: 9494
+                //page: 2
+                //propertyItems:[]
+                //            rn: "02e7f62b-7bbf-4321-a055-9d8a6d932805"
+                //size: 20
+                //sort: 0
+                //url: ""
+
+                page--;
                 Thread.Sleep(100);
             }
 
